@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.itemBox = new System.Windows.Forms.Panel();
+            this.checkBoxHide = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
-            this.checkBoxHide = new System.Windows.Forms.CheckBox();
             this.itemBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MXP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
@@ -64,6 +64,24 @@
             this.itemBox.Name = "itemBox";
             this.itemBox.Size = new System.Drawing.Size(200, 948);
             this.itemBox.TabIndex = 2;
+            // 
+            // checkBoxHide
+            // 
+            this.checkBoxHide.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxHide.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.checkBoxHide.FlatAppearance.BorderSize = 0;
+            this.checkBoxHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.checkBoxHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.checkBoxHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxHide.ForeColor = System.Drawing.Color.White;
+            this.checkBoxHide.Location = new System.Drawing.Point(0, 898);
+            this.checkBoxHide.Name = "checkBoxHide";
+            this.checkBoxHide.Size = new System.Drawing.Size(200, 50);
+            this.checkBoxHide.TabIndex = 13;
+            this.checkBoxHide.Text = ">";
+            this.checkBoxHide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxHide.UseVisualStyleBackColor = true;
+            this.checkBoxHide.CheckedChanged += new System.EventHandler(this.checkBoxHide_CheckedChanged);
             // 
             // label1
             // 
@@ -146,10 +164,10 @@
             // mediaPlayer
             // 
             this.mediaPlayer.Enabled = true;
-            this.mediaPlayer.Location = new System.Drawing.Point(660, 90);
+            this.mediaPlayer.Location = new System.Drawing.Point(310, 24);
             this.mediaPlayer.Name = "mediaPlayer";
             this.mediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer.OcxState")));
-            this.mediaPlayer.Size = new System.Drawing.Size(870, 410);
+            this.mediaPlayer.Size = new System.Drawing.Size(608, 223);
             this.mediaPlayer.TabIndex = 10;
             this.mediaPlayer.Enter += new System.EventHandler(this.mediaPlayer_Enter);
             // 
@@ -194,17 +212,6 @@
             // 
             this.timerSliding.Interval = 10;
             this.timerSliding.Tick += new System.EventHandler(this.timerSliding_Tick);
-            // 
-            // checkBoxHide
-            // 
-            this.checkBoxHide.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.checkBoxHide.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHide.Location = new System.Drawing.Point(0, 898);
-            this.checkBoxHide.Name = "checkBoxHide";
-            this.checkBoxHide.Size = new System.Drawing.Size(200, 50);
-            this.checkBoxHide.TabIndex = 13;
-            this.checkBoxHide.Text = "<";
-            this.checkBoxHide.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

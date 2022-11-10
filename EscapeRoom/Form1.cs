@@ -244,5 +244,23 @@ namespace EscapeRoom
 
             itemBox.Width = _posSliding;
         }
+
+        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHide.Checked == true)
+            {
+                //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
+                checkBoxHide.Text = "<";
+            }
+            else
+            {
+                //슬라이딩 메뉴가 보였을 때, 메뉴 버튼의 표시
+
+                checkBoxHide.Text = ">";
+            }
+
+            //타이머 시작
+            timerSliding.Start();
+        }
     }
 }
